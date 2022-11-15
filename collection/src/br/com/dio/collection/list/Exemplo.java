@@ -1,6 +1,8 @@
 package br.com.dio.collection.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.xml.transform.Source;
@@ -46,6 +48,50 @@ public class Exemplo {
         for(Double nota : notas) System.out.println(nota);
         //imprime de forma que os valores fiquem alinhados
 
-         
+        System.out.println("Exiba a terceira nota adicionada: " + notas.get(2));
+        //lembrando que toda lista começa por 0, por isso o valor requerido é 2
+
+        System.out.println("Exiba a menor nota: " + Collections.min(notas));
+        System.out.println("Exiba a maior nota: " + Collections.max(notas));
+        //ambos utilizam métodos da classe Collections
+        
+        System.out.println("Exiba a soma dos valores: ");
+        Iterator<Double> iterator = notas.iterator();
+        Double soma = 0d;
+        //inicia a variavél soma com 0 e verifica, somando com o próximo valor da lista
+        while(iterator.hasNext()){
+            //verifica se existe um próximo valor
+            Double next = iterator.next();
+            soma += next;
+        }
+        System.out.println(soma);
+
+        System.out.println("Exiba a média dos valores: " + soma/notas.size());
+        //divide a soma pelo método que retorna o total de valores da lista
+
+        System.out.println("Remova a nota 0: ");
+        notas.remove(0d);
+        //remove o valor informado
+        System.out.println("Remova a nota da posição 0: ");
+        notas.remove(0);
+        //remove o valor da posição informada
+
+        System.out.println("Remova as notas menores que 7 e exiba a lista: ");
+        Iterator<Double> iterator1 = notas.iterator();
+        while(iterator1.hasNext()){
+            //verifica se existe um próximo valor
+            Double next = iterator1.next();
+            if(next < 7) iterator1.remove();
+            //se houver e for menor que 7 o valor é excluído
+        }
+        System.out.println(notas);
+
+        System.out.println("Apague toda a lista: ");
+        notas.clear();
+        System.out.println(notas);
+
+        System.out.println("Confira se a lista está vazia: " + notas.isEmpty());
+        //método que retorna um boolean confirmando se está vazia ou não
+        
     }
 }
