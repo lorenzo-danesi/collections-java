@@ -53,10 +53,7 @@ class Gato {
 
     @Override
     public String toString() {
-        return "{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", cor='" + cor + '\'' +
-                '}';
+        return "Gato [nome=" + nome + ", idade=" + idade + ", cor=" + cor + "]";
     }
+
 }
