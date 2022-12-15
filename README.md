@@ -1,4 +1,4 @@
-# Trabalhando com Collections JAVA :coffee:
+# Trabalhando com Collections JAVA
 
 Conhecendo métodos e coleções com exemplos e exercícios utilizando:
 
